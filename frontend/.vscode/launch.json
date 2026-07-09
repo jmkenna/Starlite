@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:frontend}",
+            "name": "Debug frontend",
+            "target": "frontend",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug frontend"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:frontend}",
+            "name": "Release frontend",
+            "target": "frontend",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release frontend"
+        }
+    ]
+}

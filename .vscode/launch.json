@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:starlite}/frontend",
+            "name": "Debug frontend (frontend)",
+            "target": "frontend",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug frontend (frontend)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:starlite}/frontend",
+            "name": "Release frontend (frontend)",
+            "target": "frontend",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release frontend (frontend)"
+        }
+    ]
+}

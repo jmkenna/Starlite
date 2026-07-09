@@ -42,4 +42,3 @@ def calcRotation(orientation, rotvec):
     v = np.array(rotvec, dtype=float)   # (x, y, z)
     R = np.array(orientation, dtype=float).reshape(3, 3)
     return R @ v
-
