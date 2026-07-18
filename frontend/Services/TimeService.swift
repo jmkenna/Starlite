@@ -5,9 +5,12 @@
 //  Created by Martin McKenna on 7/17/26.
 //
 import SwiftUI
-//decimal time UTC
+//returns hour decimal time UTC
 func getTime() -> Double {
-    return 0.0
+    let now = Date()
+    let comp = Calendar.current.dateComponents(in: TimeZone(abbreviation: "UTC") ?? Calendar.current.timeZone, from: now)
+    
+    return (Double(comp.hour!)) + (Double(comp.minute!) / 60.0) + (Double(comp.second!) / 3600.0)
 }
 
 //days since Jan 1, 2000, 12:00 UTC
@@ -17,6 +20,10 @@ func getDate() -> Int {
     components.year = 2000
     components.month = 1
     components.day = 1
+    //components.timeZone = TimeZone(abbreviation: "UTC")!
+    components.hour = 0
+    components.minute = 0
+    components.second = 0
     
     guard let targetDate = calendar.date(from: components) else { return 0 }
     let startDate = calendar.startOfDay(for: targetDate)

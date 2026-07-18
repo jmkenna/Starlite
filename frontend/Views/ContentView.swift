@@ -18,6 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         let day = getDate()
+        let time = getTime()
         VStack {
             Image("Declan")
                 .resizable()
@@ -25,6 +26,7 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(.all)
             Text(day, format: .number)
+            Text(time, format: .number)
         }
         .padding()
     }
